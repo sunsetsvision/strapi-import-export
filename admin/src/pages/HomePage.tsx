@@ -32,7 +32,7 @@ const HomePage = () => {
               hasRadius={true}
             >
               <Flex direction="column" alignItems="start" gap={6}>
-                <Flex direction="column" alignItems="start" gap={0}>  
+                <Flex direction="column" alignItems="start" gap={0}>
                   <Typography variant="alpha">
                     {i18n('plugin.page.homepage.section.quick-actions.title', 'Global Actions')}
                   </Typography>
@@ -44,7 +44,7 @@ const HomePage = () => {
                   <Flex direction="column" alignItems="start" gap={4}>
                     <Flex gap={4}>
                       <ImportModal />
-                      <ExportModal availableExportFormats={[dataFormats.JSON_V2]}/>
+                      <ExportModal availableExportFormats={[dataFormats.JSON_V2, dataFormats.CSV]}/>
                       {/* <ExportButton availableExportFormats={[dataFormats.JSON_V2]} /> */}
                     </Flex>
                   </Flex>

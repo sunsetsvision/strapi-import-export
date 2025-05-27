@@ -18,12 +18,16 @@ import {
   getEntryProp,
 } from '../../utils/models.js';
 import * as converters from './converters-v2.js';
+import { convertToCsv } from './converters.js';
 
 const dataFormats = {
   JSON: 'json',
 };
 
 const dataConverterConfigs = {
+  [dataFormats.CSV]: {
+    convertEntries: convertToCsv,
+  },
   [dataFormats.JSON]: {
     convertEntries: converters.convertToJson,
   },
